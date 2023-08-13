@@ -11,17 +11,39 @@ Follow these steps to deploy token on local hardhat network using local pc (here
 
 Clone the repository and install its dependencies:
 git clone https://github.com/amankumarsharma2099/ethavaxmod3.git
+
+
 cd ETH-AVAX-Intermediate-Module-3.git
+
+
 npm install
+
+
 Install the @remix-project/remixd dependency to connect Remix IDE:
+
+
 npm install -g @remix-project/remixd
+
+
 Run the following command in the terminal to connect Remix IDE to the Hardhat local host:
+
+
 remixd -s ./ --remix-ide https://remix.ethereum.org
+
+
 Open a new terminal and start Hardhat's testing network:
+
+
 npx hardhat node
+
+
 Open the Remix online IDE in your browser.
 
+
+
 Go to File Explorer -> Workspaces -> Connect to locahost and click confirm.
+
+
 
 Rewrite the Token.sol file in the contracts directory with your own token code.
 
