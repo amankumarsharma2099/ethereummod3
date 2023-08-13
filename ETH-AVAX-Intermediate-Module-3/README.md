@@ -1,4 +1,6 @@
 ETH-AVAX Create and Mint Token
+
+
 A smart contract is written to create a token on local hardhat network and interact with the smart contract using remix IDE
 
 Description
@@ -43,6 +45,8 @@ Interacting with the Contract using Remix with Hardhat Provider
 -To mint tokens, call the mint function and provide the receiver's address and the desired amount. -To burn tokens, call the burn function and provide the amount to be burned.
 
 Authors
+
+
 Aman Kumar
 
 License
