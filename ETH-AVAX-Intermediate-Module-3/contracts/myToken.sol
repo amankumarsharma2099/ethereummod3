@@ -14,8 +14,8 @@ contract Token {
     // mapping variable here
     mapping (address=> uint) public balances;
 
-    // mint function
-    function mint(address _address, uint _value) public {
+    // mint function with only owner can mint tokens
+    function mint(address _address, uint _value) public onlyOwner{
         totalSupply += _value;
         balances[_address] += _value;  
 
@@ -28,7 +28,11 @@ contract Token {
             totalSupply -= _value;
             balances[_address] -= _value;
         }
-        
+    // Transfer Tokens
+    function transferTokens(address beneficiary, uint _amt) external{
+    require(balanceOf(msg.sender) >= _amt, "Invalid Owner !!");
+    approve(msg.sender,_amt);
+    transferFrom(msg.sender, beneficiary,_amt);
     }
 
 }
